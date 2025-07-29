@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>100 Reasons I Love You, My Love ❤️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--pink-light:#ffe4f1;--pink-dark:#ffd1e8;--accent:#ff6fa7;--white:#ffffff;}
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Poppins',sans-serif;background:linear-gradient(135deg,var(--pink-light)0%,var(--pink-dark)100%);color:#444;overflow-x:hidden;min-height:100vh;}
+    /* Floating heart pattern */
+    body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;animation:float 30s linear infinite;background-image:url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"120\" height=\"120\" viewBox=\"0 0 24 24\" fill=\"%23ffadc6\" opacity=\"0.14\"><path d=\"M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z\"/></svg>');background-size:60px 60px;}
+    @keyframes float{from{transform:translateY(0);}to{transform:translateY(-100%);}}
+
+    header{text-align:center;padding:3rem 1rem 1.5rem;color:#fff;text-shadow:0 2px 4px rgba(0,0,0,.25);}h1{font-family:'Pacifico',cursive;font-size:3rem;}.intro{font-size:1.25rem;margin-top:.75rem;}
+
+    /* Spotify Playlist */
+    .playlist{display:flex;justify-content:center;align-items:center;margin:2rem auto;padding:0;background:var(--white);border-radius:20px;box-shadow:0 6px 18px rgba(0,0,0,.25);max-width:700px;width:90%;}
+    .playlist iframe{width:100%;height:400px;border:none;border-radius:14px;}
+
+    /* Bonus video */
+    .video-container{text-align:center;margin:3rem auto;max-width:700px;width:90%;}
+    .video-container iframe{width:100%;height:315px;border:none;border-radius:18px;box-shadow:0 4px 16px rgba(0,0,0,.25);}  
+
+    /* Reasons grid */
+    .container{max-width:1100px;margin:auto;padding:2rem 1rem 4rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.25rem;}
+    .reason{background:rgba(255,255,255,0.94);border-radius:22px;padding:1.4rem 1rem;text-align:center;cursor:pointer;box-shadow:0 6px 12px rgba(0,0,0,.08);transition:transform .3s ease,box-shadow .3s ease;}
+    .reason:hover{transform:translateY(-4px);box-shadow:0 10px 18px rgba(0,0,0,.15);}  .emoji{font-size:2.2rem;display:block;margin-bottom:.35rem;animation:pulse 2s infinite;}@keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.15);} } .reason-number{font-weight:600;color:var(--accent);} .hidden-text{max-height:0;overflow:hidden;opacity:0;transition:max-height .45s ease,opacity .45s ease;margin-top:.6rem;line-height:1.4;background:rgba(255,255,255,0.85);border-radius:14px;padding:.5rem .6rem;} .reason.open .hidden-text{max-height:260px;opacity:1;}
+
+    /* Photo gallery */
+    .gallery{max-width:700px;width:90%;margin:3rem auto 0;position:relative;overflow:hidden;border-radius:20px;box-shadow:0 6px 18px rgba(0,0,0,.25);background:var(--white);} 
+    .slides{display:flex;transition:transform .6s ease;}
+    .slide{min-width:100%;display:flex;justify-content:center;align-items:center;}
+    .slide img{max-width:100%;max-height:100%;width:auto;height:auto;display:block;border-radius:20px;}
+    .arrow{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.4);color:#fff;border:none;border-radius:50%;width:44px;height:44px;font-size:1.4rem;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:2;}
+    .arrow:hover{background:rgba(0,0,0,.6);} .prev{left:12px;} .next{right:12px;}
+    .gallery-caption{text-align:center;font-size:1.1rem;margin:1rem auto 3rem;color:#555;max-width:700px;width:90%;}
+
+    footer{text-align:center;padding:2rem 1rem;color:#666;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>100 Reasons I Love You, My Love ❤️</h1>
+    <p class="intro">Hi Mel-Belle 😼<br><br>Since I can't gift you anything physical for now, decided to make you a little digital gift for National Girlfriend Day. Thank you so much for being the best girlfriend, lover, friend, and wife I could ever ask for. These are just 100 of the infinite reasons I love you. Click on each heart to reveal one. Love you 😘 <br><br> Forever yours,<br> Azizam</p>
+  </header>
+
+  <section class="playlist">
+    <iframe src="https://open.spotify.com/embed/playlist/1TF69e1U6fctEd6hPOWxPq?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+  </section>
+
+  <div class="container" id="reasons-container"></div>
+
+  <section class="gallery" id="gallery">
+    <button class="arrow prev" aria-label="Previous">❮</button>
+    <div class="slides" id="slides">
+      <div class="slide"><img src="IMG_7874.jpeg" alt="Photo 1"></div>
+      <div class="slide"><img src="IMG_7875.jpeg" alt="Photo 2"></div>
+      <div class="slide"><img src="IMG_7876.jpeg" alt="Photo 3"></div>
+      <div class="slide"><img src="IMG_7873.jpeg" alt="Photo 4"></div>
+    </div>
+    <button class="arrow next" aria-label="Next">❯</button>
+  </section>
+  <p class="gallery-caption">And here's some baby Ryan pictures like I promised 😉</p>
+
+  <footer>Made with ❤️ by Azizam</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    const emojis=['💖','💌','🌹','💕','💘','💞','💓','💗','💝','❤️'];
+    const reasons=[
+      "I love your beauty, you're the most beautiful person inside and out.",
+      "I love how you're presence makes everything feel lighter.",
+      "I love how I can see our future in your beautiful eyes.",
+      "I love your compassion and how you care for the people around you.",
+      "I love your passion and the impact you've made on everyone at work.",
+      "I love the support you give me, you're always my #1 supporter.",
+      "I love how you remember the little things.",
+      "I love all the sweet TikToks you send me.",
+      "I love your hugs, they’re the warmest thing on earth.",
+      "I love how strong you are, you go through so much and you always persevere, you're always the toughest cookie.",
+      "I love your taste in music, and how you share it with me.",
+      "I love the way you say “I love you.”",
+      "I love how you never make me feel like I have to be anyone other than who I truly am.",
+      "I love your texts,they always brighten my day.",
+      "I love our late‑night talks.",
+      "I love the sound of your beuatiful voice and laugh, it's my favorite sound",
+      "I love how you can make any day a perfect day, as long as you're there.",
+      "I love how you celebrate my wins, big or small.",
+      "I love how you fall asleep on my shoulder during movies.",
+      "I love how you show so much interest in all my passions.",
+      "I love how you got so invested in basketball just because you know how much I love it.",
+      "I love when you send me pictures of yourself, I'm amazed everytime by your beauty.",
+      "I love how being and talking with you always make me forget about all my stress and problems.",
+      "I love the way you look at me, always full of love and affection.",
+      "I love that even your absence makes me feel how present your love is.",
+      "I love how every love song makes me think of you.",
+      "I love how you've given me so many moments to always cherish and think about, and how many many more we'll make together.",
+      "I love how every part of you feels familiar, like I've loved you forever.",
+      "I love the way your eyes hold so much depth, I could look in them forever.",
+      "I love your smile, the way it lights up your whole face and takes my breath away.",
+      "I love the way you walk, with so much natural grace and style.",
+      "I love your neck and the way it feels when I kiss it, like I'm kissing something sacred.",
+      "I love the way your hair falls, whether it's styled or messy, it's always perfect to me.",
+      "I love your hands, not just how they feel but how they hold, how they create, how they love.",
+      "I love the warmth of your waist when I wrap my arms around you.",
+      "I love your gyatt ;)",
+      "I love the sofness of your lips.",
+      "I love every inch of your body, everything is so perfect and beautiful to me, like someone sculpted you.",
+      "I love how you're beauty is effortless, you don't have to try, and yet you amaze me.",
+      "I love how you always take a moment to appreciate my effort, even if it's small.",
+      "I love that you never let a kind gesture go unnoticed.",
+      "I love how you get shy when I complement you, even though you're the most beautiful person I've ever seen.",
+      "I love how we can be weird together.",
+      "I love how we always match energies, I never feel like I'm doing too much.",
+      "I love how your kisses make me feel and how they stay with me, even hours after you're gone.",
+      "I love how our embraces feel like time pauses, just us, just love.",
+      "I love how our bodies speak love through every touch, every hug, every kiss.",
+      "I love how our physical connection is full of laughter, tenderness, and fire.",
+      "I love the intimacy of your body pressed against mine, with nothing between us but love and passion.",
+      "I love how you make every kiss feel like a slow-burning flame.",
+      "I love how you trust me with not just your body, but your boundaries and vulnerabilities.",
+      "I love how you let go with me, how free you are when it's just us.",
+      "I love how you smell, I can never get enough.",
+      "I love the soft weight of your head on my shoulder.",
+      "I love your humor and how funny you are, you can always make me laugh.",
+      "I love how you interact with kids, I know you'll be the best mom ever.",
+      "I love how dedicated you are to your future and studies, you're going to do amazing when you're back in school.",
+      "I love how you've become my safe space in a world that can feel so loud.",
+      "I love your purple toe ;)",
+      "I love how you supported and was there for me during my ACL injury, a few years ago that would've devastated me yet you made it so easy to go through.",
+      "I love all the gifts you've given me, from the socks to the LeBron bouquet, I keep every single one around me and cherish them all.",
+      "I love the time we spent watching movies together, so many sweet memories, and never thought I would be a Twilight fan lol.",
+      "I love how you made me a Swifite.",
+      "I love your cute lil rizz faces, they alwaays work ;)",
+      "I love how stunning you look when you do your makeup.",
+      "I love how breathtaking you are without your makeup, you still look so perfect.",
+      "I love your outfits and style, from the jewlelry to the clothes, you always find a way to make your beauty shine brighter.",
+      "I love how no matter what you're wearing, you're always the masterpiece.",
+      "I love hearing you talk about your day and your thoughts, it's like watching the world through your eyes.",
+      "I love the way your voice changes when you get excited about something you love.",
+      "I love listening to you talk about your dreams and future, it reminds me how beautiful your heart is.",
+      "I love how just hearing your voice can shift my mood, like you bring light through sound alone.",
+      "I love how lucky I feel to know I'll be sharing the rest of my life with you.",
+      "I love how dedicated you are to the gym and taking care of your body.",
+      "I love that your physical strength is just a reflection of the stenght I see in your heart every single day.",
+      "I love trying new restaurants with you because everything tastes better when I'm with you.",
+      "I love how every meal we share together is so romantic, no matter where we are.",
+      "I love how you still give me butterflies when we're out to a meal together.",
+      "I love how your first kiss made me fall in love, and every kiss since has only deepened it.",
+      "I love your farts and burps, I love all of them and to me they make you even more beautiful.",
+      "I love how you encourage my crazy ideas.",
+      "I love the sparkle in your eyes when you’re excited.",
+      "I love the way you care for your friends.",
+      "I love sharing meals that we cook together.",
+      "I love how you steal my hoodies.",
+      "I love how you help me see the bright side.",
+      "I love the stories you tell about your childhood.",
+      "I love how you remember birthdays and anniversaries.",
+      "I love that you sing in the shower.",
+      "I love how you tuck your hair behind your ear.",
+      "I love our spontaneous road trips.",
+      "I love how you make rainy days cozy.",
+      "I love how you cheer me on even when I doubt myself.",
+      "I love the way you share your dreams with me.",
+      "I love how you respect my boundaries and ask for mine.",
+      "I love how you make me a better listener.",
+      "I love the warmth of your hand in mine.",
+      "I love how you love your family.",
+      "I love how you challenge injustice and stand up for what’s right.",
+      "I love the way you look at sunsets.",
+      "I love that you laugh at your own jokes.",
+      "I love how you fall asleep on my shoulder during movies.",
+      "I love how you forgive quickly and easily.",
+      "I love the faith you have in us.",
+      "I love how you make ‘home’ wherever we are together.",
+      "I love that you are my soulmate.",
+      "I love you more every single day."  
+    ];
+
+    const container=document.getElementById('reasons-container');
+    reasons.forEach((reason,index)=>{
+      const card=document.createElement('div');
+      card.className='reason';
+      const emoji=emojis[index%emojis.length];
+      card.innerHTML=`<span class='emoji'>${emoji}</span><span class='reason-number'>Reason #${index+1}</span><div class='hidden-text'>${reason}</div>`;
+      card.addEventListener('click',()=>{
+        const isOpen=card.classList.toggle('open');
+        if(isOpen){confetti({particleCount:40,spread:60,origin:{y:0.6}});}      });
+      container.appendChild(card);
+    });
+
+    const slides=document.getElementById('slides');
+    const total=slides.children.length;let idx=0;
+    const update=()=>{slides.style.transform=`translateX(-${idx*100}%)`;};
+    document.querySelector('.prev').onclick=()=>{idx=(idx-1+total)%total;update();};
+    document.querySelector('.next').onclick=()=>{idx=(idx+1)%total;update();};
+  </script>
+</body>
+</html>
